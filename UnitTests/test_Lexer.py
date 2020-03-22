@@ -39,8 +39,8 @@ end;"""
         expected_token_sequence = (Tokens.Identifier, Tokens.Operator, Tokens.Keyword, Tokens.Separator, Tokens.Identifier, Tokens.Separator,
                                    Tokens.Identifier, Tokens.Separator, Tokens.Identifier, Tokens.Separator, Tokens.Keyword, Tokens.Separator)
 
-        lex = WhitespaceIgnoringLexerDecorator(Lexer())
+        lexer = WhitespaceIgnoringLexerDecorator(Lexer())
         tokens = []
-        for i, token in enumerate(lex.tokenize(text)):
+        for i, token in enumerate(lexer.tokenize(text)):
             expected_token = expected_token_sequence[i]
             self.assertIsInstance(token, expected_token)
