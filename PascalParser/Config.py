@@ -12,3 +12,5 @@ ReservedWords = configparser['Tokens']['Reserved Words'].split()
 operator_chars = ''.join(Operators)
 identifier_start_chars = string.ascii_letters + '_'
 identifier_after_chars = string.ascii_letters + '_' + string.digits
+
+PathsToTest = configparser['Test']['Test Paths'].split()
